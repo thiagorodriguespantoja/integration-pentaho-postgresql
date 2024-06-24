@@ -1,11 +1,11 @@
 FROM ubuntu:20.04
 
-# Instalar dependências
+# Instalar dependências necessárias
 RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
     wget \
     unzip \
-    libwebkitgtk-3.0-0
+    libwebkit2gtk-4.0-37
 
 # Definir diretório de trabalho
 WORKDIR /opt
@@ -18,8 +18,16 @@ RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho-9.4/client-tools
 # Copiar scripts de inicialização
 COPY init-scripts/ /docker-entrypoint-initdb.d/
 
-# Definir o ponto de entrada
-CMD ["/opt/data-integration/spoon.sh"]
+# Definir variáveis de ambiente
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PDI_HOME=/opt/data-integration
+
+# Definir ponto de entrada
+ENTRYPOINT ["/docker-entrypoint-initdb.d/configure-pentaho.sh"]
+
+# Expor a porta 8080
+EXPOSE 8080
+
 
 
 
