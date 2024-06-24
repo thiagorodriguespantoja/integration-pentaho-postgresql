@@ -1,5 +1,5 @@
-# Usando a imagem oficial do PostgreSQL como base
-FROM postgres:latest
+# Usando uma versão específica da imagem oficial do PostgreSQL
+FROM postgres:16.3
 
 # Definindo variáveis de ambiente para o PostgreSQL
 ENV POSTGRES_USER postgres
@@ -16,6 +16,7 @@ EXPOSE 5432
 
 # Comando para copiar o pg_hba.conf e iniciar o PostgreSQL
 CMD ["bash", "-c", "cp /etc/postgresql/pg_hba.conf /var/lib/postgresql/data/pg_hba.conf && docker-entrypoint.sh postgres"]
+
 
 
 
