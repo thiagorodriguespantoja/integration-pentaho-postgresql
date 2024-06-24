@@ -4,8 +4,8 @@ services:
   pentaho:
     build: .
     environment:
-      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
-      PDI_HOME: /opt/data-integration
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+      - PDI_HOME=/opt/data-integration
     ports:
       - "8080:8080"
     volumes:
@@ -15,3 +15,4 @@ services:
 
 networks:
   pentaho-net:
+
