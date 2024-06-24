@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5E5888-1388-4468-9895-414226941393}|Itens de Solu\u00E7\u00E3o{4C5E5888-1388-4468-9895-414226941393}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4C5E5888-1388-4468-9895-414226941393}|Itens de Solu\u00E7\u00E3o{4C5E5888-1388-4468-9895-414226941393}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5E5888-1388-4468-9895-414226941393}|Itens de Solu\u00E7\u00E3o{4C5E5888-1388-4468-9895-414226941393}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4C5E5888-1388-4468-9895-414226941393}|Itens de Solu\u00E7\u00E3o{4C5E5888-1388-4468-9895-414226941393}|solutionrelative:Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5E5888-1388-4468-9895-414226941393}|Itens de Solu\u00E7\u00E3o{4C5E5888-1388-4468-9895-414226941393}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{4C5E5888-1388-4468-9895-414226941393}|Itens de Solu\u00E7\u00E3o{4C5E5888-1388-4468-9895-414226941393}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\troubleshooting.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|solutionrelative:troubleshooting.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\error_handling.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|solutionrelative:error_handling.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\data_integration_steps.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|solutionrelative:data_integration_steps.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\environment_setup.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|documentation{073F36D0-126F-4C1D-BC8A-9E1096E71A63}|solutionrelative:environment_setup.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "troubleshooting.md",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\troubleshooting.md",
+              "RelativeDocumentMoniker": "troubleshooting.md",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\troubleshooting.md",
+              "RelativeToolTip": "troubleshooting.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-06-23T16:24:00.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "error_handling.md",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\error_handling.md",
+              "RelativeDocumentMoniker": "error_handling.md",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\error_handling.md",
+              "RelativeToolTip": "error_handling.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-06-23T16:23:51.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "data_integration_steps.md",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\data_integration_steps.md",
+              "RelativeDocumentMoniker": "data_integration_steps.md",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\data_integration_steps.md",
+              "RelativeToolTip": "data_integration_steps.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-06-23T16:23:40.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-23T16:22:08.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-06-23T16:21:32.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-06-23T16:21:15.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "environment_setup.md",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\environment_setup.md",
+              "RelativeDocumentMoniker": "environment_setup.md",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\desafio-devops-systock\\environment_setup.md",
+              "RelativeToolTip": "environment_setup.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-06-23T16:23:28.897Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
