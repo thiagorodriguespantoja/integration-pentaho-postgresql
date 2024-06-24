@@ -1,4 +1,3 @@
-
 # Usando a imagem oficial do PostgreSQL como base
 FROM postgres:latest
 
@@ -15,7 +14,8 @@ COPY pg_hba.conf /etc/postgresql/pg_hba.conf
 # Expondo a porta do PostgreSQL
 EXPOSE 5432
 
-# Comando para substituir o pg_hba.conf e iniciar o PostgreSQL
+# Comando para copiar o pg_hba.conf e iniciar o PostgreSQL
 CMD ["bash", "-c", "cp /etc/postgresql/pg_hba.conf /var/lib/postgresql/data/pg_hba.conf && docker-entrypoint.sh postgres"]
+
 
 
