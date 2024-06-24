@@ -10,12 +10,15 @@ services:
       - "8080:8080"
     volumes:
       - pentaho-data:/opt/data-integration
+    networks:
+      - pentaho-net
 
 networks:
   pentaho-net:
 
 volumes:
   pentaho-data:
+
 
 
 

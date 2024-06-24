@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-# Install necessary packages
+# Instalar pacotes necessários
 RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
     wget \
@@ -11,28 +11,29 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Create a virtual environment
+# Criar um ambiente virtual
 RUN python3 -m venv /opt/venv
 
-# Activate virtual environment and install gdown
+# Ativar ambiente virtual e instalar gdown
 RUN /opt/venv/bin/pip install gdown
 
 WORKDIR /opt
 
-# Download Pentaho PDI zip file from Google Drive using gdown
+# Baixar arquivo zip do Pentaho PDI do Google Drive usando gdown
 RUN /opt/venv/bin/gdown https://drive.google.com/uc?id=18L6v2045b7UwNwVCpIG20pVG9LH4kLbl -O pdi-ce-9.4.0.0-343.zip && \
     unzip pdi-ce-9.4.0.0-343.zip && \
     rm pdi-ce-9.4.0.0-343.zip
 
-# Set environment variables
+# Definir variáveis de ambiente
 ENV PENTAHO_HOME=/opt/data-integration
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
-# Expose necessary ports
+# Expor portas necessárias
 EXPOSE 8080
 
-# Default command
+# Comando padrão
 CMD ["bash"]
+
 
 
 
