@@ -14,8 +14,11 @@ COPY pg_hba.conf /etc/postgresql/pg_hba.conf
 # Expondo a porta do PostgreSQL
 EXPOSE 5432
 
-# Remover o diretório de dados se ele existir e iniciar o PostgreSQL com um novo diretório de dados
-CMD ["bash", "-c", "rm -rf /var/lib/postgresql/data_pg && mv /var/lib/postgresql/data /var/lib/postgresql/data_pg && cp /etc/postgresql/pg_hba.conf /var/lib/postgresql/data_pg/pg_hba.conf && docker-entrypoint.sh postgres"]
+# Usando um novo diretório para os dados do PostgreSQL
+VOLUME /var/lib/postgresql/data_pg
+
+# Remover o conteúdo do diretório de dados (se existir) e iniciar o PostgreSQL
+CMD ["bash", "-c", "rm -rf /var/lib/postgresql/data_pg/* && docker-entrypoint.sh postgres"]
 
 
 
