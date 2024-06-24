@@ -1,11 +1,13 @@
-FROM ubuntu:20.04
+FROM debian:bookworm
 
-# Instalar dependências necessárias
+# Instalar dependências necessárias e limpar cache
 RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
     wget \
     unzip \
-    libwebkit2gtk-4.0-37
+    libwebkit2gtk-4.0-37 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Definir diretório de trabalho
 WORKDIR /opt
@@ -27,6 +29,7 @@ ENTRYPOINT ["/docker-entrypoint-initdb.d/configure-pentaho.sh"]
 
 # Expor a porta 8080
 EXPOSE 8080
+
 
 
 
