@@ -31,8 +31,9 @@ ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # Expor portas necessárias
 EXPOSE 8080
 
-# Comando padrão
-CMD ["bash"]
+# Manter o container ativo
+CMD ["tail", "-f", "/dev/null"]
+
 
 
 
