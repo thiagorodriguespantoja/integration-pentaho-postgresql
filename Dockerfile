@@ -21,3 +21,4 @@ CMD ["bash", "-c", "rm -rf /var/lib/postgresql/data/* && cp /etc/postgresql/pg_h
 
 
 
+
