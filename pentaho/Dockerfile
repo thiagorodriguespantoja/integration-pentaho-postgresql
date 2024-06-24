@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /opt
 
 # Baixar e descompactar o Pentaho
-RUN wget https://sourceforge.net/projects/pentaho/files/Data%20Integration/9.4/client-tools/pdi-ce-9.4.0.0-343.zip/download -O pdi-ce-9.4.0.0-343.zip \
+RUN wget https://downloads.sourceforge.net/project/pentaho/Pentaho%20Data%20Integration/9.4/pdi-ce-9.4.0.0-343.zip -O pdi-ce-9.4.0.0-343.zip \
     && unzip pdi-ce-9.4.0.0-343.zip \
     && rm pdi-ce-9.4.0.0-343.zip
 
@@ -29,6 +29,7 @@ ENTRYPOINT ["/docker-entrypoint-initdb.d/configure-pentaho.sh"]
 
 # Expor a porta 8080
 EXPOSE 8080
+
 
 
 
