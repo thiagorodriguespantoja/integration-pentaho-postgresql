@@ -9,8 +9,11 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./init-scripts:/docker-entrypoint-initdb.d/
-      - ./backups/backup_a.dmp:/docker-entrypoint-initdb.d/backup_a.dmp
-      - ./backups/backup_b.dmp:/docker-entrypoint-initdb.d/backup_b.dmp
+      - db-data:/var/lib/postgresql/data
+    command: ["bash", "-c", "rm -rf /var/lib/postgresql/data/* && cp /etc/postgresql/pg_hba.conf /var/lib/postgresql/data/pg_hba.conf && docker-entrypoint.sh postgres"]
+
+volumes:
+  db-data:
+
     
 
