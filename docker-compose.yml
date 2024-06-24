@@ -10,9 +10,13 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data_pg
+    networks:
+      - db-net
+
+networks:
+  db-net:
 
 volumes:
   db-data:
-
     
 
