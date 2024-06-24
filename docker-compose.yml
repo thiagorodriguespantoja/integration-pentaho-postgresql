@@ -13,3 +13,4 @@ services:
       - ./init-scripts:/docker-entrypoint-initdb.d/
       - ./backups/backup_a.dmp:/docker-entrypoint-initdb.d/backup_a.dmp
       - ./backups/backup_b.dmp:/docker-entrypoint-initdb.d/backup_b.dmp
+    restart: always
