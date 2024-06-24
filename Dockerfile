@@ -15,7 +15,8 @@ COPY pg_hba.conf /etc/postgresql/pg_hba.conf
 EXPOSE 5432
 
 # Comando para copiar o pg_hba.conf e iniciar o PostgreSQL
-CMD ["bash", "-c", "rm -rf /var/lib/postgresql/data/* && cp /etc/postgresql/pg_hba.conf /var/lib/postgresql/data/pg_hba.conf && docker-entrypoint.sh postgres"]
+CMD ["bash", "-c", "rm -rf /var/lib/postgresql/data && cp /etc/postgresql/pg_hba.conf /var/lib/postgresql/data/pg_hba.conf && docker-entrypoint.sh postgres"]
+
 
 
 
