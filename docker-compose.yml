@@ -9,7 +9,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - db-data:/var/lib/postgresql/data_pg
+      - db-data-pg:/var/lib/postgresql/data_pg
+    command: ["postgres", "-c", "listen_addresses='*'"]
     networks:
       - db-net
 
@@ -17,6 +18,5 @@ networks:
   db-net:
 
 volumes:
-  db-data:
-    
+  db-data-pg:
 

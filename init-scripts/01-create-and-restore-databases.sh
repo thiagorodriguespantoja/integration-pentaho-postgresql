@@ -36,3 +36,4 @@ pg_restore -U "$POSTGRES_USER" -d banco_b /docker-entrypoint-initdb.d/backup_b.d
 echo "Banco de dados banco_b restaurado com sucesso."
 
 echo "Script de inicialização concluído."
+
