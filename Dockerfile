@@ -13,6 +13,13 @@ COPY init-scripts/adjust-config.sh /docker-entrypoint-initdb.d/
 COPY backups/backup_a.dmp /docker-entrypoint-initdb.d/backup_a.dmp
 COPY backups/backup_b.dmp /docker-entrypoint-initdb.d/backup_b.dmp
 
+# Dá permissões de execução ao script
+RUN chmod +x /docker-entrypoint-initdb.d/adjust-config.sh
+
+# Definindo variáveis de ambiente para o PostgreSQL
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD password
+
 # Expondo a porta do PostgreSQL
 EXPOSE 5432
 
