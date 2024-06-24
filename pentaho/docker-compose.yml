@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  pentaho:
+    build: .
+    environment:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+      PDI_HOME: /opt/data-integration
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - pentaho-net
+
+networks:
+  pentaho-net:
