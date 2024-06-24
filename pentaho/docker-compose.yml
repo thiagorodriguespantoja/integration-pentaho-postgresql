@@ -9,12 +9,17 @@ services:
     ports:
       - "8080:8080"
     volumes:
+      - pentaho-data:/opt/data-integration
       - ./init-scripts:/docker-entrypoint-initdb.d
     networks:
       - pentaho-net
 
 networks:
   pentaho-net:
+
+volumes:
+  pentaho-data:
+
 
 
 
