@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{4C5E5888-1388-4468-9895-414226941393}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backups", "backups", "{7D009FB8-8717-4964-ADEA-3F476DDE0431}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ktr_files", "ktr_files", "{682A16BA-4385-4D1F-A264-2F418E06DA02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{073F36D0-126F-4C1D-BC8A-9E1096E71A63}"
+	ProjectSection(SolutionItems) = preProject
+		data_integration_steps.md = data_integration_steps.md
+		environment_setup.md = environment_setup.md
+		error_handling.md = error_handling.md
+		troubleshooting.md = troubleshooting.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F4326BB-59B5-4DF2-A7C7-48D0BA1DF515}
+	EndGlobalSection
+EndGlobal
