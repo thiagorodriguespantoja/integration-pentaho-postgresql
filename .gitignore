@@ -1,0 +1,11 @@
+# Ignorar arquivos de build do Docker
+**/data-integration/
+**/pdi-ce-9.4.0.0-343.zip
+
+# Ignorar arquivos de log
+**/logs/
+*.log
+
+# Ignorar outros arquivos temporários
+tmp/
+temp/

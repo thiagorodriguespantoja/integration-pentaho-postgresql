@@ -7,7 +7,10 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libwebkit2gtk-4.0-37 \
     python3-pip \
-    python3-venv && \
+    python3-venv \
+    postgresql-client \
+    nginx \
+    supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -26,11 +29,25 @@ RUN /opt/venv/bin/gdown "https://drive.google.com/uc?export=download&id=18L6v204
     unzip pdi-ce-9.4.0.0-343.zip && \
     rm pdi-ce-9.4.0.0-343.zip
 
+# Copiar scripts de inicialização
+COPY init-scripts/ /docker-entrypoint-initdb.d/
+COPY configure-pentaho.sh /opt/
+
+# Ajustar permissões dos scripts de inicialização
+RUN chmod +x /docker-entrypoint-initdb.d/*.sh && \
+    chmod +x /opt/configure-pentaho.sh
+
+# Configurar supervisord
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 # Expor portas necessárias
-EXPOSE 8080 6000
+EXPOSE 8080 6000 5432
 
 # Manter o container ativo
-CMD ["tail", "-f", "/dev/null"]
+CMD ["/usr/bin/supervisord"]
+
+
+
 
 
 
