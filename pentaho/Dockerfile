@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-# Instalar pacotes necessários
+# Instalar dependências
 RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
     wget \
@@ -11,31 +11,26 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Criar um ambiente virtual
+# Criar e ativar o ambiente virtual do Python
 RUN python3 -m venv /opt/venv
 
-# Ativar ambiente virtual e instalar gdown
-RUN /opt/venv/bin/pip install gdown
+# Instalar o gdown no ambiente virtual
+RUN /opt/venv/bin/pip install gdown && \
+    /opt/venv/bin/pip install --upgrade pip setuptools wheel
 
+# Configurar diretório de trabalho
 WORKDIR /opt
 
-# Baixar arquivo zip do Pentaho PDI do Google Drive usando gdown
-RUN /opt/venv/bin/gdown https://drive.google.com/uc?id=18L6v2045b7UwNwVCpIG20pVG9LH4kLbl -O pdi-ce-9.4.0.0-343.zip && \
+# Baixar e descompactar o arquivo do Pentaho PDI
+RUN /opt/venv/bin/gdown "https://drive.google.com/uc?export=download&id=18L6v2045b7UwNwVCpIG20pVG9LH4kLbl" -O pdi-ce-9.4.0.0-343.zip && \
     unzip pdi-ce-9.4.0.0-343.zip && \
     rm pdi-ce-9.4.0.0-343.zip
 
-# Definir variáveis de ambiente
-ENV PENTAHO_HOME=/opt/data-integration
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# Ajustar permissões dos scripts de inicialização
+RUN chmod +x /docker-entrypoint-initdb.d/*.sh
 
-# Expor portas necessárias
-EXPOSE 8080
-
-# Manter o container ativo
-CMD ["tail", "-f", "/dev/null"]
-
-
-
+# Iniciar o Pentaho PDI
+CMD ["/opt/data-integration/spoon.sh"]
 
 
 

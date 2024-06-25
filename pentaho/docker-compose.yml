@@ -1,3 +1,6 @@
+volumes:
+  db-data:
+
 version: '3.9'
 
 services:
@@ -8,16 +11,15 @@ services:
       - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
     ports:
       - "8080:8080"
+      - "6000:6000"
     volumes:
-      - pentaho-data:/opt/data-integration
+      - ./init-scripts:/docker-entrypoint-initdb.d
     networks:
       - pentaho-net
 
 networks:
   pentaho-net:
 
-volumes:
-  pentaho-data:
 
 
 
