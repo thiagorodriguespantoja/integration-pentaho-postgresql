@@ -7,8 +7,8 @@ services:
       - PENTAHO_HOME=/opt/data-integration
       - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
     ports:
+      - "80:80"
       - "8080:8080"
-      - "6000:6000"
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
     networks:
@@ -16,6 +16,7 @@ services:
 
 networks:
   pentaho-net:
+
 
 
 
