@@ -12,4 +12,3 @@ chmod +x $PENTAHO_HOME/*.sh
 
 # Mensagem de conclusão
 echo "Configuração do Pentaho concluída."
-
