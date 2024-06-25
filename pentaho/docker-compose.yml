@@ -3,14 +3,23 @@ version: '3.9'
 services:
   pentaho:
     build: .
+    ports:
+      - "8080:8080"
+      - "6000:6000"
     environment:
       - PENTAHO_HOME=/opt/data-integration
       - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-    ports:
-      - "80:80"
-      - "8080:8080"
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - pentaho-net
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
       - pentaho-net
 
