@@ -26,12 +26,11 @@ RUN /opt/venv/bin/gdown "https://drive.google.com/uc?export=download&id=18L6v204
     unzip pdi-ce-9.4.0.0-343.zip && \
     rm pdi-ce-9.4.0.0-343.zip
 
-# Ajustar permissões dos scripts de inicialização
-RUN chmod +x /docker-entrypoint-initdb.d/*.sh
+# Expor portas necessárias
+EXPOSE 8080 6000
 
-# Iniciar o Pentaho PDI
-CMD ["/opt/data-integration/spoon.sh"]
-
+# Manter o container ativo
+CMD ["/opt/data-integration/spoon.sh","tail", "-f", "/dev/null"]
 
 
 
