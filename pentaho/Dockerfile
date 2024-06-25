@@ -30,7 +30,7 @@ RUN /opt/venv/bin/gdown "https://drive.google.com/uc?export=download&id=18L6v204
 EXPOSE 8080 6000
 
 # Manter o container ativo
-CMD ["/opt/data-integration/spoon.sh","tail", "-f", "/dev/null"]
+CMD ["tail", "-f", "/dev/null"]
 
 
 
