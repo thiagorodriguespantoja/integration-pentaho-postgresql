@@ -3,14 +3,32 @@ version: '3.9'
 services:
   pentaho:
     build: .
+    depends_on:
+      - postgres
     ports:
       - "8080:8080"
       - "6000:6000"
     environment:
       - PENTAHO_HOME=/opt/data-integration
       - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+      - PGHOST=postgres
+      - PGUSER=pentaho
+      - PGPASSWORD=password
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - pentaho-net
+
+  postgres:
+    image: postgres:9.4-alpine
+    environment:
+      - POSTGRES_USER=pentaho
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - pentaho-pg-data:/var/lib/postgresql/data/pgdata
     networks:
       - pentaho-net
 
@@ -26,7 +44,8 @@ services:
 networks:
   pentaho-net:
 
-
+volumes:
+  pentaho-pg-data:
 
 
 
