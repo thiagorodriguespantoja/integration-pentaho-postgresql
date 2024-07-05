@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  postgres:
+    build: ./postgres
+    container_name: postgres
+    networks:
+      - rede_pentaho
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=pentaho
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=pentaho
+
+networks:
+  rede_pentaho:
+    external: true

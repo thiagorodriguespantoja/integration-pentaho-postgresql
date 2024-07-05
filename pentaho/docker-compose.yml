@@ -1,8 +1,8 @@
-version: '3'
+version: '3.9'
+
 services:
-  pen-server:
-    build: .
-    image: lpaschoal/pentaho_server:9.0
+  pentaho:
+    build: ./pentaho
     container_name: pentaho-server
     networks:
       - rede_pentaho
@@ -10,17 +10,16 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ./data/hsqldb:/opt/pentaho/pentaho-server/data/hsqldb:rw #Schedule/Quartz/hibernate
-      - ./data/jackrabbit-repository:/opt/pentaho/pentaho-server/pentaho-solutions/system/jackrabbit/repository:rw #login, bancos, JOB, TR
+      - ./data/hsqldb:/opt/pentaho/pentaho-server/data/hsqldb:rw
+      - ./data/jackrabbit-repository:/opt/pentaho/pentaho-server/pentaho-solutions/system/jackrabbit/repository:rw
       - ./logs:/opt/pentaho/pentaho-server/tomcat/logs
     environment:
       - COMPOSE_CONVERT_WINDOWS_PATHS=1
       - TZ=America/Sao_Paulo
+
 networks:
   rede_pentaho:
-    external:
-      name: network_pentaho
-
+    external: true
 
 
 
